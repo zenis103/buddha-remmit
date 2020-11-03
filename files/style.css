@@ -1,0 +1,218 @@
+* {
+  font-family: comic sans ms;
+}
+.login-bg {
+  height: 100%;
+  background-image: url("img/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.register-bg {
+  height: 100%;
+  background-image: linear-gradient(to left, white, #b8def4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.container {
+  margin: auto;
+  padding: 0%;
+  text-align: center;
+}
+.navbar {
+  background-color: #f15151;
+}
+.nav-link {
+  color: white;
+  font-size: 16px;
+}
+
+.logo {
+  justify-content: center;
+  width: 50%;
+  height: auto;
+}
+.login-section {
+  text-align: center;
+}
+.form {
+  padding: 10px;
+  margin: auto;
+}
+.sizing {
+  padding: 3px;
+  width: 256px;
+  margin: auto;
+}
+.discription {
+  font-family: open sans;
+}
+.select {
+  text-align: center;
+}
+.rounded-pills {
+  border: 3px solid #cfcbcb;
+  border-radius: 20px;
+}
+.btn {
+  width: 256px;
+  margin: auto;
+  background-color: #4f428a;
+  color: white;
+}
+
+.ftn-logo {
+  text-align: left;
+}
+p {
+  font-size: 13px;
+}
+.row a {
+  color: #606060;
+}
+
+h3 {
+  display: inline;
+  font-size: 15px;
+}
+.promo {
+  font-size: 15px;
+}
+.account {
+  color: #033893;
+  font-size: 32px;
+}
+.form-date {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.birth {
+  margin: 5px;
+  padding: 3px;
+  border: 3px solid #cfcbcb;
+  border-radius: 20px;
+  width: 80px;
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+}
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.menu {
+  border-radius: 30px;
+  background-color: white;
+  width: 80%;
+}
+.sliding {
+  border-radius: 20px;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sliding li a {
+  width: 100%;
+  display: block;
+  color: #f15151;
+  padding: 8px 16px;
+
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.sliding li a:hover {
+  background-color: #f15151;
+  color: white;
+}
+.main-body p {
+  text-align: center;
+  font-weight: 600;
+  font-family: open sans;
+  font-size: 16px;
+}
+.main-body .discription {
+  text-align: center;
+  font-weight: 600;
+  font-family: open sans;
+  font-size: 14px;
+  color: black;
+}
+.main-body .red-discription {
+  text-align: center;
+  font-weight: 600;
+  font-family: open sans;
+  font-size: 14px;
+  color: red;
+}
+.d-flex {
+  width: 100%;
+  border-radius: 0px 0px 30px 0px;
+  background-color: #f15151;
+}
+.d-flex a {
+  font-size: 14px;
+}
+
+.d-flex ul {
+  position: relative;
+  border-radius: 20px;
+}
+.d-flex .nav-link {
+  position: relative;
+  z-index: 999999;
+}
+.main-body .panel {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: #f15151;
+
+  cursor: pointer;
+  z-index: 0;
+}
+.innercontent {
+  border-radius: 20px 20px 0px 0px;
+
+  border-radius: 20px px 0px 0px;
+  width: 100%;
+}
+.innercontent .row {
+}
+.innercontent .detail {
+  display: flex;
+  justify-content: space-between;
+
+  height: 14vh;
+}
+.detail p {
+  margin-top: 8px;
+  font-weight: 600;
+  font-family: open sans;
+  font-size: 16px;
+  color: black;
+}
+.discription {
+  text-align: left;
+}
