@@ -32,7 +32,7 @@
      
       
       <div class="collapse rounded-bottom" id="collapseExample" style="background-color: #f15151;";>
-<div class="menu ml-5">
+<div class="menu ml-3 ">
           <ul class="sliding p-3">
             <li><a href="">User</a></li>
             <li><a href="">AU Deposit Request </a></li>
@@ -45,10 +45,10 @@
 
 <div class="main-body">
   
-  <div class="d-flex  ">
-    <ul class="nav" role="tablist" style="background-color: #f15151;">
+  <div class="d-flex" >
+    <ul class="nav " role="tablist" style="background-color: #f15151;">
 
-<li class="nav-items ml-3">
+<li class="nav-items ml-3 ">
   <a href="#transaction" id="transaction-tab" class="nav-link active" aria-selected="true" data-toggle="tab" role="tab"> All Transaction</a>
 </li>
 <li class="nav-items ">
@@ -64,7 +64,7 @@
   <div class="tab-content">
      <div class="tab-pane fade show active" id="transaction" aria-labelledby="transaction-tab" role="tabpanel">
        <div class="innercontent">
-        <div class="row p-5 m-2">
+        <div class="row  mt-5 ">
           <div class="detail col-sm-12 col-md-3 m-3" >
             <p>Contact</p> 
             <img src="files/img/contact.png" style="width: 61px; height: 63px;">
@@ -86,13 +86,17 @@
             <p>Completed Transaction</p> 
             <img src="files/img/completed.png" style="width: 61px; height: 63px;">
           </div>
+          <div class="detail col-sm-12 col-md-3 m-3 h-5px w-2px ">
+            </div>
+    
         </div>
        </div>
      </div>
      <div class="tab-pane fade" id="stn" aria-labelledby="stn-tab" role="tabpanel">
       <div class="innercontent">
         <div class="main-body mt-5">       
-          <p class="text-center">Send Money to your relatives and Friends in nepal </p>
+          <p class="text-center">Send Money to your relatives and Friends in Nepal </p>
+          <form class="form ">
             <div class="form-group   sizing ">
               <label class="discription text-left">Amount : </label>
               <input type="number" class="form-control rounded-pills " id="amount"  placeholder="Amount in dollar" autocomplete="off" required="">
@@ -118,22 +122,196 @@
               <label class="discription text-left">Address : </label>
               <input type="text" class="form-control rounded-pills " id="raddress"  placeholder="Receiver Address" autocomplete="off" required="">
             </div>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Pickup Types : </label>
+              <br>
+              
+              <label   for="pickuptype"><input type="radio" onclick="showHideBankDetails(this)" name="pickuptype"   value="IME">
+                IME</label>
+    
+                <label   for="pickuptype"><input type="radio" onclick="showHideBankDetails(this)" name="pickuptype" class="ml-5" value="bankdeposit">
+                Bank Deposit</label> 
+                <input type="hidden" id="pickuptypevalue" value="ime">
+
+             
+                
             
+            </div>
             
+             <div class="" id="imeinfofields" style="display: none" >
+              <div class="form-group  sizing ">
+                <label class="discription text-left">Pickup location : </label>
+                <input type="text" class="form-control rounded-pills " id="raddress"  placeholder="Receiver Address" autocomplete="off" required="">
+              </div>
+              <div class="form-group  sizing ">
+              <label class="red-discription mt-4 text-center">Only Internet Banking Receipt will be accepted. Please Deposit the amount in the following Bank account  </label>
+              </div>
+              <div class="form-group sizing">
+                <label class="discription text-left">Our Bank Details : </label>
+              <select name="deposit_bank_id" required="" class="form-control rounded-pills" onchange="showbankdetails(this)" onselect="showbankdetails(this)" id="deposit_bank_id">
+                <option value="">--Select Bank--</option>
+                                                                    <option data-name="Buddha Remit" data-account="0404 3434223344" data-bank="Common Wealth Bank" value="2">Common Wealth Bank</option>
+                                                                                  <option data-name="Fiona Golden" data-account="0203 102929299" data-bank="ANZ Bank" value="6">ANZ Bank</option>
+                                                        <option data-name="Jamal Waters" data-account="Maiores cillumquos" data-bank="Vaughan Duffy" value="7">Vaughan Duffy</option>
+                                      </select>
+            </div>
+            </div>
+            <div class="" id="bankinfofields" style="display: none">
+              <div class="form-group  sizing ">
+                <label class="discription text-left">Bank Name : </label>
+                <input type="text" class="form-control rounded-pills " id="bname"  placeholder="Bank name" autocomplete="off" required="">
+              </div>
+              <div class="form-group  sizing ">
+                <label class="discription text-left">Bank Branch : </label>
+                <input type="text" class="form-control rounded-pills " id="bankbranch"  placeholder="Bank Branch" autocomplete="off" required="">
+              </div>
+              <div class="form-group  sizing ">
+                <label class="discription text-left">Account Name : </label>
+                <input type="text" class="form-control rounded-pills " id="aname"  placeholder="Account Name" autocomplete="off" required="">
+              </div>
+              <div class="form-group  sizing ">
+                <label class="discription text-left">Account number : </label>
+                <input type="number" class="form-control rounded-pills " id="accnumber"  placeholder="Account Number" autocomplete="off" required="">
+              </div>
+              <div class="form-group  sizing mt-4 text-center">
+              <label class="discription" style="font-size: 18px;">OR</label>
+              </div>
+              <div class="form-group  sizing mt-4">
+                <label class="discription text-left">Upload Photo with Bank Details : </label>
+                <input  class="file sizing" type="file" id="file-input" name="file-input" required="" multiple="">
+              </div>
+              <div class="form-group  sizing ">
+                <label class="red-discription mt-4 text-center">Only Internet Banking Receipt will be accepted. Please Deposit the amount in the following Bank account  </label>
+                </div>
+
+
+              <div class="form-group sizing">
+              <select name="deposit_bank_id" required="" class="form-control rounded-pills" onchange="showbankdetails(this)" onselect="showbankdetails(this)" id="deposit_bank_id">
+                <option value="">--Select Bank--</option>
+                                                                    <option data-name="Buddha Remit" data-account="0404 3434223344" data-bank="Common Wealth Bank" value="2">Common Wealth Bank</option>
+                                                                                  <option data-name="Fiona Golden" data-account="0203 102929299" data-bank="ANZ Bank" value="6">ANZ Bank</option>
+                                                        <option data-name="Jamal Waters" data-account="Maiores cillumquos" data-bank="Vaughan Duffy" value="7">Vaughan Duffy</option>
+                                      </select>
+            </div>
+
+            
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="#f15151" fill-opacity="1" d="M0,224L1440,64L1440,320L0,320Z" class=""></path></svg>
+            <div class="note-box mb-4 " >
+              <div class="form-group  sizing-b "style="color: white;>
+                <label class="discription text-left">Deposit Receipt : </label>
+                <input class="file"  type="file" id="file-input" name="file-input" required="" multiple="">
+              </div>
+              <div class="form-group  sizing-b ">
+                <label class="discription text-left" style="color: white;">Note : </label>
+                <input type="text" class="form-control rounded-pills " id="note"  placeholder="Any Details you want to address" autocomplete="off" required="">
+              </div>
+              <div class="form-group sizing mt-4">
+                <input type="checkbox" class="form-check-input" id="Check">
+                <label class="form-check-label" for="exampleCheck1">Save to contact</label>
+              </div>
+              <div class="buttons text-center mt-4 mb-4">
+              <div class="form-group " >
+                <button type="submit" style="border: 3px solid #04f84e;"  class="btn rounded-pills ">save</button>
+                <button type="submit" style="border: 3px solid white; background-color: #f15151;" class="btn rounded-pills ">reset</button>
+              </div></div>
+              <div class="" style=" height: 20px;"></div>
+
+            </div>
           </form>
   
     </div>
       </div>
     </div>
     <div class="tab-pane fade" id="ria" aria-labelledby="ria-tab" role="tabpanel">
-      <div class="innercontent">
-        <h4>step 2</h4>
+      <div class="innercontent " >
+        <div class="main-body mt-5" >       
+          <p class="text-center">Receive Money in Australia </p>
+          <form class="form " >
+            <div class="form-group   sizing ">
+              <label class="discription text-left">Deposit Amount : </label>
+              <input type="number" class="form-control rounded-pills " id="damount"  placeholder="Amount in Rs." autocomplete="off" required="">
+              <label class="red-discription">Exchange rate: 88 </label>
+            </div>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Sender Name : </label>
+              <input type="text" class="form-control rounded-pills " id="sender-name"  placeholder="Sender Name" autocomplete="off" required="">
+            </div>
+            
+            <div class="form-group   sizing ">
+              <label class="discription text-left">Sender's Phone number: </label>
+              <input type="number" class="form-control rounded-pills " id="sphonenumber"  placeholder="Receiver Phone number" autocomplete="off" required="">
+            </div>
+            <div class="form-group   sizing ">
+              <label class="discription text-left">Reason: </label>
+              <input type="text" class="form-control rounded-pills " id="sreason"  placeholder="Reason for Transaction " autocomplete="off" required="">
+            </div>
+            
+            <p class="text-center mt-5">Receiver Account Details : </p>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Bank Name : </label>
+              <input type="text" class="form-control rounded-pills " id="bank-name"  placeholder="Bank Name" autocomplete="off" required="">
+            </div>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Account Name : </label>
+              <input type="text" class="form-control rounded-pills " id="account-name"  placeholder="Account Name" autocomplete="off" required="">
+            </div>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">BSB Number: </label>
+              <input type="number" class="form-control rounded-pills " id="bsb-number"  placeholder="BSB Number" autocomplete="off" required="">
+            </div>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Account Number : </label>
+              <input type="number" class="form-control rounded-pills " id="account-number"  placeholder="Account Number" autocomplete="off" required="">
+            </div>
+
+
+            <p class="text-center mt-5">OR</p>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Upload Photo with Bank Details : </label>
+              <input  class="file sizing" type="file" id="file-input" name="file-input" required="" multiple="">
+            </div>
+            <div class="form-group  sizing ">
+              <label class="discription text-left">Place of Depoit (Nepal) </label>
+              <select name="deposit_bank_id" required="" class="form-control rounded-pills">
+                <option value="" class="text-center">--Select Bank--</option>
+                    <option value="1">Prime  Commercial Bank (A/c: Quia labore magnam c )</option>
+                   <option value="2">Leandra Francis (A/c: Perspiciatis animi )</option>
+                                                                                  
+            </select>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="#f15151" fill-opacity="1" d="M0,224L1440,64L1440,320L0,320Z" class=""></path></svg>
+  
+            <div class="note-box mb-4 " >
+              <div class="form-group  sizing-b "style="color: white;>
+                <label class="discription text-left">Deposit Receipt : </label>
+                <input class="file"  type="file" id="file-input" name="file-input" required="" multiple="">
+              </div>
+              <div class="form-group  sizing-b ">
+                <label class="discription text-left" style="color: white;">Note : </label>
+                <input type="text" class="form-control rounded-pills " id="note"  placeholder="Any Details you want to address" autocomplete="off" required="">
+              </div>
+              <div class="form-group sizing mt-4">
+                <input type="checkbox" class="form-check-input" id="Check">
+                <label class="form-check-label" for="exampleCheck1">Save to contact</label>
+              </div>
+              <div class="buttons text-center mt-4 mb-4">
+              <div class="form-group " >
+                <button type="submit" style="border: 3px solid #04f84e;"  class="btn rounded-pills ">save</button>
+                <button type="submit" style="border: 3px solid white; background-color: #f15151;" class="btn rounded-pills ">reset</button>
+              </div></div>
+              <div class="" style=" height: 20px;"></div>
+
+            </div>
+      
+
+          </form>
       </div>
     </div>
   </div>
 </div>
-
-<footer class="footer" > 
+</div>
+<footer class="footer " > 
   <p class="">Copyright © Buddha Remit V1.0 All rights reserved</p>
 </footer>
 
@@ -147,6 +325,23 @@
 
 
 <script>
+
+function showHideBankDetails(obj){
+		$(".pickuptype").removeAttr("checked");
+		$(obj).prop("checked",true);
+		$("#pickuptypevalue").val($(obj).val());
+		var option=$(obj).val();
+		if(option=="bankdeposit"){
+			$("#bankinfofields").css("display",'block');
+			$("#imeinfofields").css("display","none");
+
+		}else{
+			$("#bankinfofields").css("display","none");
+			if(option=="IME"){
+				$("#imeinfofields").css("display","block");
+			}
+		}
+	}
   $(document).ready(function(){
      var panel = $('.panel').css('width');
      var width = panel.replace('px','');

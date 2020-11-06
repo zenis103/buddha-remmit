@@ -46,12 +46,21 @@
   text-align: center;
 }
 .form {
-  padding: 10px;
   margin: auto;
 }
 .sizing {
   padding: 3px;
   width: 256px;
+  margin: auto;
+}
+.sizing-b {
+  padding: 3px;
+  width: 356px;
+  margin: auto;
+}
+.sizing-c {
+  justify-content: center;
+  display: inline;
   margin: auto;
 }
 .discription {
@@ -69,6 +78,18 @@
   margin: auto;
   background-color: #4f428a;
   color: white;
+}
+.buttons .btn {
+  width: 156px;
+  margin: auto;
+  background-color: white;
+  color: black;
+}
+.file {
+  border-radius: 20px;
+  background-color: white;
+  border: 3px solid #cfcbcb;
+  color: black;
 }
 
 .ftn-logo {
@@ -121,7 +142,7 @@ footer p {
 .menu {
   border-radius: 30px;
   background-color: white;
-  width: 80%;
+  width: 95%;
 }
 .sliding {
   border-radius: 20px;
@@ -134,7 +155,7 @@ footer p {
 .sliding li a {
   width: 100%;
   display: block;
-  color: #f15151;
+  color: ;
   padding: 8px 16px;
 
   text-decoration: none;
@@ -149,7 +170,7 @@ footer p {
   text-align: center;
   font-weight: 600;
   font-family: open sans;
-  font-size: 16px;
+  font-size: 20px;
 }
 .main-body .discription {
   text-align: center;
@@ -194,11 +215,11 @@ footer p {
 }
 .innercontent {
   border-radius: 20px 20px 0px 0px;
-
-  border-radius: 20px px 0px 0px;
   width: 100%;
 }
 .innercontent .row {
+  justify-content: center;
+  margin: 0;
 }
 .innercontent .detail {
   display: flex;
@@ -215,4 +236,11 @@ footer p {
 }
 .discription {
   text-align: left;
+}
+.note-box {
+  border-radius: 20px 0px 0px 0px;
+  width: auto;
+  background-color: #f15151;
+  padding: 0;
+  margin: 0;
 }
